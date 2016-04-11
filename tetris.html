@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>tetris</title>
+    <script src="tetris.js"></script>
+    <script src="shapes.js"></script>
+    <link rel="stylesheet" type="text/css" href="tetris.css">
+</head>
+
+<body onload="createGrid()">
+    <div id="container">
+        <div id="grid">
+            <!-- here the grid is generated using javascript -->
+        </div>
+
+        <div id="nextShape">
+            <div id="0" class="gridCells"></div>
+            <div id="1" class="gridCells"></div>
+            <div id="2" class="gridCells"></div>
+            <div id="3" class="gridCells"></div>
+
+            <div id="4" class="gridCells"></div>
+            <div id="5" class="gridCells"></div>
+            <div id="6" class="gridCells"></div>
+            <div id="7" class="gridCells"></div>
+
+            <div id="8" class="gridCells"></div>
+            <div id="9" class="gridCells"></div>
+            <div id="10" class="gridCells"></div>
+            <div id="11" class="gridCells"></div>
+
+            <div class="gridCells"></div>
+            <div class="gridCells"></div>
+            <div class="gridCells"></div>
+            <div class="gridCells"></div>
+
+
+        </div>
+        <div id="time"></div>
+        <div id="level">
+            <h3>Level <span id="levelNo"></span><h3></div>
+			<div id = "score"></div>
+			<div id = "rowsClear"><h5><span id="rowsClearNo"> </span></h5></div>
+			<input type="button" name="button" id="start"  value="Start" onclick="generateShape(); timer(1); initValue();"> </input>
+			<input type="button" name="button"  value="pause" onclick="pause();"> </input>
+				<input type="button" name="button" id="stop"  value="stop" onclick="gameOver();"> </input>
+				<input type="button" name="button" id="reload"  value="reload" onclick="reload();"> </input>
+
+		</div>
+	</body>
+
+</html>

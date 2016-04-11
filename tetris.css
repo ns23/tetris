@@ -1,0 +1,33 @@
+body{
+	/*background-image: url("1.jpg");*/
+}
+.gridCells
+{
+	height:26px;
+	width:30px;
+	border:1px solid #73AD21;
+	float:left;
+	padding:1px;
+	//background-color:#c2c2d6;
+}
+			
+#grid{
+	width:360px;
+	height:auto;
+	margin:0 auto;
+	float:left;
+
+}
+
+#nextShape{
+	
+	width:160px;
+	height:auto;
+	margin:0 auto;
+	float:left;
+	
+}
+
+#id{
+	float:left;
+}
