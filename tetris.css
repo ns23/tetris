@@ -1,14 +1,66 @@
 body{
-	
+	background-image: url('1.jpg');
 }
+h1{
+	text-align:center;
+	font-size:50px;
+	font-style:oblique;
+	color:#3249A6;
+	text-shadow:5px 5px 10px #D49090;
+
+}
+.main{
+	padding-top: 10px;
+}
+.intro{
+	float:left;
+}
+#container{
+	/* display:inline; */
+	width:730px;
+	margin:0 auto;
+}
+
+h4{
+	font-style:italic;
+}
+.inline{
+	/* display:inline-block; */
+}
+.info{
+	display:inline;
+	position: relative;
+	top:20px;
+}
+#btns{
+	height:30px;
+	padding-bottom:110px;
+	padding-left:10px;
+}
+.buttons {
+	display:inline;
+	float:bottom: ;
+    /* background-color: #4CAF50; /* Green */ */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 .gridCells
 {
 	height:26px;
 	width:30px;
-	border:1px solid #73AD21;
+	border:1px solid #000500;
+	border-style: groove;
 	float:left;
 	padding:1px;
-	//background-color:#c2c2d6;
+	background-color:#364D37;
 }
 			
 #grid{
@@ -16,6 +68,7 @@ body{
 	height:auto;
 	margin:0 auto;
 	float:left;
+
 
 }
 
@@ -30,4 +83,23 @@ body{
 
 #id{
 	float:left;
+}
+
+#time{
+	font-size:30pt;
+	color:#F04141;
+	font-family:Verdana	;
+}
+
+#levelNo{
+font-size: 20pt;
+}
+
+#score{
+font-size: 15pt;
+font-weight:bold;
+}
+
+#rowsClear{
+	font-size: 15pt;
 }

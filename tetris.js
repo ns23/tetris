@@ -9,7 +9,7 @@ var delay = 500;
 var dropDelay = 100;
 var oldDelay = delay;
 
-var colors = ["transparent", "red", "blue", "orange", "yellow", "magenta", "cyan", "lime"];
+var colors = ["#364D37", "red", "blue", "orange", "yellow", "magenta", "cyan", "lime"];
 var colorValue;
 
 var imax = 21;
@@ -44,7 +44,7 @@ function timer(t) {
         dropDelay -= 5;
         level++;
         //document.getElementById("level").innerHTML = "<h3>Level :"+level+"</h3>";
-        document.getElementById("levelNo").innerHTML = level;
+        document.getElementById("levelNo").innerHTML = "Level: "+level;
     }
     t++;
     timeout = setTimeout(function() {
@@ -154,12 +154,14 @@ function reload() {
 function initValue() {
 
 
-    document.getElementById("levelNo").innerHTML = level;
+    document.getElementById("levelNo").innerHTML ="Level: "+ level;
     //document.getElementById("time").innerHTML = "00:00" ;
     document.getElementById("rowsClearNo").innerHTML = "Rows Cleared: " + rowsClear;
     document.getElementById("score").innerHTML = "Score: " + score;
     document.getElementById("start").disabled = true;
+    document.getElementById("start").style.backgroundColor="#C4CCCF";
     document.getElementById("reload").disabled = true;
+   document.getElementById("reload").style.backgroundColor="#C4CCCF";
     isPaused = true;
 
 
@@ -263,7 +265,13 @@ function generateRandomInt(min, max) {
 }
 
 function rotate(axis, theArray) {
-    //debugger;
+    
+    /*
+    @no rotation at o shape
+     */
+    if (colorValue==4) {
+        return;
+    };
     f = new Array(4);
     var flag = 0;
 
@@ -312,12 +320,7 @@ function rotate(axis, theArray) {
         colorDivs(colorValue, f);
 
     }
-    /*else
-    {
-    	//alert("cannot move");
-    	console.log("connot rotate");
-    }*/
-
+    
 }
 
 
@@ -396,7 +399,6 @@ function pause() {
         alert("Please start the game first");
     }
 
-    //clearTimeout(t)
 }
 
 function gameOver() {
@@ -404,6 +406,8 @@ function gameOver() {
         clearTimeout(timeout);
         end = true;
         document.getElementById("reload").disabled = false;
+        document.getElementById("reload").style.backgroundColor="#555555";
+
         isPaused = false;
         document.cookie = "username=John Doe";
         alert("The game is over.Reload page to play again");
